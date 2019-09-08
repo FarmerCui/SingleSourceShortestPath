@@ -3,9 +3,9 @@ import unittest
 from shortest_path import DepthFirstSearch
 
 
-class TestFoo(unittest.TestCase):
+class TestDepthFirstSearch(unittest.TestCase):
 
-    def test_foo_name(self):
+    def test_search(self):
         self.graph = {0: {1: 6, 3: 18, 2: 8},
                       1: {4: 11},
                       2: {3: 9},

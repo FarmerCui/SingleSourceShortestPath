@@ -1,9 +1,9 @@
 import unittest
 
-from shortest_path import BreadthFirstSearch
+from shortest_path import DijkstraSearch
 
 
-class TestBreadthFirst(unittest.TestCase):
+class TestDijkstraSearch(unittest.TestCase):
 
     def test_search(self):
         self.graph = {0: {1: 6, 3: 18, 2: 8},
@@ -15,7 +15,7 @@ class TestBreadthFirst(unittest.TestCase):
                       }
         self.start = 0
         self.end = 5
-        bfs = BreadthFirstSearch(self.graph, self.start, self.end)
-        dist, travel = bfs.search()
+        dijkstra = DijkstraSearch(self.graph, self.start, self.end)
+        dist, travel = dijkstra.search()
         self.assertEqual(dist, 20)
         self.assertEqual(travel, [(0, 1), (1, 4), (4, 5)])
