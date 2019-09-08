@@ -10,5 +10,5 @@ pip install -r requirements.txt
 
 ### Run your tests
 ```
-python -m unittest tests
+python -m unittest tests\%filename%
 ```
